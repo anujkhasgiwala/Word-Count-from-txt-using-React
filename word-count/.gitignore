@@ -1,0 +1,7 @@
+build/
+node_modules/
+.projectile
+*~
+\#*\#
+.\#*
+.atom-build.yml
