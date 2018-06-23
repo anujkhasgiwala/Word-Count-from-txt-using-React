@@ -1,19 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-ReactDOM.render(<body />, document.getElementById('root'));
+import Main from "./main"
 
-class Main extends Component {
-    render() {
-        return (
-            <div className="__main">
-                <div className="main">
-                    <script src="header.js"></script>
-                    <script src="sideBar.js"></script>
-                    <script src="content.js"></script>
-                </div>
-            </div>
-        )
-    }
-}
+ReactDOM.render(<Main />, document.getElementsByClassName('__main')[0]);
