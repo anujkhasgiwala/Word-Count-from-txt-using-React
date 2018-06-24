@@ -162,12 +162,10 @@ body {
 }
 
 .__content .card .__card-content .words {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: flex-start;
-  margin-left: 2rem;
+  margin-top: 2em;
+  margin-left: 1rem;
   width: 95%;
+  max-height: 95%;
   overflow: auto;
 }
 
