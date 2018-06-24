@@ -3,10 +3,6 @@ import './index.css';
 import Box from "./box";
 
 class CardContent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="__content">
