@@ -13,6 +13,7 @@ class Box extends React.Component {
         var span = document.getElementsByClassName("file-label")[0].appendChild(document.createElement('span'));
         span.className = 'file-name';
         span.innerHTML = document.getElementsByTagName("input")[0].value.split(/(\\|\/)/g).pop();
+        document.getElementsByTagName("input")[1].disabled = false;
     }
 
     onFileSubmit() {
@@ -36,7 +37,7 @@ class Box extends React.Component {
                                 </span>
                             </label>
                             <input type="submit" className="button is-right"
-                                   placeholder="Finish" onClick={this.onFileSubmit}/>
+                                   placeholder="Finish" disabled={true} onClick={this.onFileSubmit}/>
                         </div>
                     </div>
                 </div>

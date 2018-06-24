@@ -237,3 +237,8 @@ body {
   cursor: pointer;
   background-color: lightgrey;
 }
+
+.label {
+  margin-top: 2rem;
+  font-weight: normal;
+}

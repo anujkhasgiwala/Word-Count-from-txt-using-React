@@ -25,9 +25,15 @@ class ReadFile extends React.Component {
     alterElements() {
         var cardContentDiv = document.getElementsByClassName("box")[0];
         cardContentDiv.parentNode.removeChild(cardContentDiv);
+
+        const labelTag = document.createElement("label");
+        labelTag.className = "label";
+        document.getElementsByClassName("__card-content")[0].appendChild(labelTag);
+
         cardContentDiv = document.createElement("div");
         cardContentDiv.className = "words";
         document.getElementsByClassName("__card-content")[0].appendChild(cardContentDiv);
+        this.findSpan();
     }
 
     renderTags() {
@@ -40,5 +46,13 @@ class ReadFile extends React.Component {
             span.innerHTML = words[i];
             wordsDiv.appendChild(span);
         }
+    }
+
+    findSpan() {
+        var cardContentDiv = document.getElementsByClassName("words")[0];
+        cardContentDiv.addEventListener('click', function(event) {
+            document.getElementsByClassName("label")[0].innerHTML = "You clicked on the word \"" +
+                event.target.innerHTML + "\" which is the \"" + event.target.id + "th\" word in file.";
+        });
     }
 } export default ReadFile;
